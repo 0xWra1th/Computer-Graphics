@@ -1,0 +1,68 @@
+<!--
+DATE: 29/04/2021
+AUTHOR: 0xWraith (u19013192)
+-->
+<html class="noselect" style="background-color: #3d485a;">
+    <style>
+        .noselect {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+    <!--SHADERS-->
+    <script id="vertex-shader" type="x-shader/x-vertex">
+
+        attribute vec4 vPosition;
+        attribute vec4 vColor;
+        
+        varying vec4 fColor;
+        
+        void
+        main()
+        {
+            gl_Position = vPosition;
+            fColor = vColor;
+        }
+    </script>
+        
+    <script id="fragment-shader" type="x-shader/x-fragment">
+        
+        precision mediump float;
+        
+        varying vec4 fColor;
+        
+        void
+        main()
+        {
+            gl_FragColor = fColor;
+        }
+    </script>
+
+    <script type="text/javascript" src="MV.js"></script>
+    <script type="text/javascript" src="initShaders.js"></script>
+    <script type="text/javascript" src="webgl-utils.js"></script>
+    <script type="text/javascript" src="assign.js"></script>
+
+    <head>
+        <title>COS 344 Assignment 2</title>
+    </head>
+    <body onload="task1()">
+        <center>
+            <div>
+                <h1 style="color: #E4E4E4;margin-top: 40px" >u19013192</h1>
+                <canvas style="margin: 15 0 25 0 " id="gl-canvas" width="650" height="650">Your browser does not support HTML5!</canvas>
+                <div id="controls">
+                    <button onclick="task1()" style="color: #E4E4E4;background-color: #00adb5;width: 100px;height: 40px" id="task1;">TASK 1</button>
+                    <button onclick="task2()" style="color: #E4E4E4;background-color: #00adb5;width: 100px;height: 40px" id="task2;">TASK 2</button>
+                    <button style="color: #E4E4E4;background-color: #00adb5;width: 100px;height: 40px" id="task3">TASK 3</button>
+                    <button style="color: #E4E4E4;background-color: #00adb5;width: 100px;height: 40px" id="task4">TASK 4</button>
+                    <button style="color: #E4E4E4;background-color: #00adb5;width: 100px;height: 40px" id="task5">TASK 5</button>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>
