@@ -1,0 +1,88 @@
+<html style="background-color: black;color: white">
+	<head>
+		<title>Assignment One - u19013192</title>
+	</head>
+	<body>
+		<center>
+			<h1>Task 1</h1>
+			<div style="width: 100%">
+				<center>
+					<h4>Enter values separated by a comma (e.g. 1,2,3,4,5...)</h4>
+				</center>
+			</div>
+
+			<div style="background-color: blue;width:800px;height: 500px;">
+				<div style="float:left;width:250px;height:500px">
+					<div style="margin-top: 25px;margin-bottom: 25px"><label><b>Operations</b></label></div>
+					<button onclick="q1()" style="width:150px;margin-top: 10px;justify-content: center;display: flex">αx</button>
+					<button onclick="q2()" style="width:150px;margin-top: 10px;justify-content: center;display: flex">x + y</button>
+					<button onclick="q3()" style="width:150px;margin-top: 10px;justify-content: center;display: flex">x - y</button>
+					<button onclick="q4()" style="width:150px;margin-top: 10px;justify-content: center;display: flex">x · y</button>
+					<button onclick="q5()" style="width:150px;margin-top: 10px;justify-content: center;display: flex">||x||<sub>2</sub></button>
+					<button onclick="q6()" style="width:150px;margin-top: 10px;justify-content: center;display: flex">x × y</button>
+					<button onclick="q7()" style="width:150px;margin-top: 10px;justify-content: center;display: flex">αM</button>
+					<button onclick="q8()" style="width:150px;margin-top: 10px;justify-content: center;display: flex">M<sub>T</sub></button>
+					<button onclick="q9()" style="width:150px;margin-top: 10px;justify-content: center;display: flex">Mx</button>
+					<button onclick="q10()" style="width:150px;margin-top: 10px;justify-content: center;display: flex">MG</button>
+					<button onclick="q11()" style="width:150px;margin-top: 10px;justify-content: center;display: flex">Determinant of M</button>
+					<button onclick="q12()" style="width:150px;margin-top: 10px;justify-content: center;display: flex">Solve for x</button>
+				</div>
+				<div style="float:left;background-color: green;width:550px;height:500px;">
+					<div style="width:250px">
+						<div style="margin-top: 25px; position: relative">
+							<label><b>Results</b></label>
+							<textarea id="results" style="resize: none;left:-100px;top:-30px;margin-top: 50px;background-color: white; color: black; width:455px; height:400px;position: relative"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="background-color: purple;width:1000px;height: 300px">
+				<div style="float: left;width:250px">
+					<div style="margin-top: 25px"><label><b>Vector and Constant Values:</b></label></div>
+					<div style="margin-bottom: 5px">
+						<label>x</label>
+						<input type="text" id="x" style="width:100px;justify-content: right;display: flex">
+					</div>
+					<div style="margin-bottom: 5px">
+						<label>y</label>
+						<input type="text" id="y" style="width:100px;justify-content: right;display: flex">
+					</div>
+					<div style="margin-bottom: 5px">
+						<label>α</label>
+						<input type="text" id="alpha" style="width:100px;justify-content: right;display: flex">
+					</div>
+				</div>
+				<div style="float:left;width:250px">
+					<div style="margin-top: 25px"><label><b>Matrix and Vector Dimensions:</b></label></div>
+					<div style="margin-bottom: 5px">
+						<label>n</label>
+						<input type="text" id="n" style="width:100px;justify-content: right;display: flex" onchange="setMRows()">
+					</div>
+					<div style="margin-bottom: 5px">
+						<label>m</label>
+						<input type="text" id="m" style="width:100px;justify-content: right;display: flex">
+					</div>
+					<div style="margin-bottom: 5px">
+						<label>l</label>
+						<input type="text" id="l" style="width:100px;justify-content: right;display: flex" onchange="setGRows()">
+					</div>
+					<div style="margin-bottom: 5px">
+						<label>j</label>
+						<input type="text" id="j" style="width:100px;justify-content: right;display: flex">
+					</div>
+				</div>
+				<div style="float:left; width:250px">
+					<div style="margin-top: 25px"><label><b>Matrix M Values:</b></label></div>
+					<div id="MatrixM" style="margin-bottom: 5px">
+					</div>
+				</div>
+				<div style="float:left; width:250px">
+					<div style="margin-top: 25px"><label><b>Matrix G Values:</b></label></div>
+					<div id="MatrixG" style="margin-bottom: 5px">
+					</div>
+				</div>
+			</div>
+		</center>
+	</body>
+	<script type="text/javascript" src="assignment.js"></script>
+</html>
