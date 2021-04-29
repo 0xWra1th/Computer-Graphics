@@ -1,1 +1,2 @@
-Computer Graphics
+### WebGL Computer Graphics
+#### Computer graphics university assignments.
