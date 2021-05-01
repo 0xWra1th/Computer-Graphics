@@ -25,7 +25,7 @@ function task1(){
     gl.disable(gl.DEPTH_TEST);
 
     gl.viewport( 0, 0, canvas.width, canvas.height );
-    gl.clearColor( 0.8, 0.8, 0.8, 1.0 );
+    gl.clearColor( 0, 0, 0, 0 );
     gl.clear(gl.COLOR_BUFFER_BIT);
     // ------------------
 
@@ -168,7 +168,7 @@ function task2(){
     gl.enable(gl.DEPTH_TEST);
 
     gl.viewport( 0, 0, canvas.width, canvas.height );
-    gl.clearColor( 0.8, 0.8, 0.8, 1.0 );
+    gl.clearColor( 0, 0, 0, 0 );
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     // ------------------
 
@@ -453,12 +453,17 @@ function task2(){
 
 function render2(len) {
 
-    gl.clearColor( 1.0, 1.0, 1.0, 1.0 );
+    gl.clearColor( 0, 0, 0, 0 );
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    
     if(wire){
-		gl.drawElements(gl.LINE_LOOP, len, gl.UNSIGNED_SHORT, 0);
+		for(var i=0;i<len*2;i+=3){
+    		gl.drawElements(gl.LINE_LOOP, 3, gl.UNSIGNED_SHORT, i);
+    	}
     }else{
-    	gl.drawElements(gl.TRIANGLES, len, gl.UNSIGNED_SHORT, 0);
+    	for(var i=0;i<len*2;i+=3){
+    		gl.drawElements(gl.TRIANGLES, 3, gl.UNSIGNED_SHORT, i);
+    	}
     }
 
 }
