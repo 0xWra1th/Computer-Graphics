@@ -1,0 +1,43 @@
+<!--
+DATE: 29/04/2021
+AUTHOR: 0xWraith (u19013192)
+-->
+<html class="noselect" style="background-color: #3d485a;">
+    <style>
+        .noselect {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+    <script type="text/javascript" src="MV.js"></script>
+    <script type="text/javascript" src="initShaders.js"></script>
+    <script type="text/javascript" src="webgl-utils.js"></script>
+    <script type="text/javascript" src="assign.js"></script>
+
+    <head>
+        <title>TASK 4</title>
+    </head>
+    <body onload="task4()">
+        <center>
+            <div>
+                <h1 style="color: #E4E4E4;margin-top: 20px" >u19013192</h1>
+                <canvas style="margin: 10 0 5 0; border-style: solid" id="gl-canvas" width="650" height="650">Your browser does not support HTML5!</canvas>
+                <div id="controls">
+                    <div style="background-color: grey; margin-top:10px;width:200px" hidden="true" id="Buttons">
+	                    <input onchange="changeAxis()" type="radio" id="X" name="axis" value="2">
+						<label for="X">X</label><br>
+						<input onchange="changeAxis()" type="radio" id="Y" name="axis" value="1" checked="true">
+						<label for="Y">Y</label><br>
+						<input onchange="changeAxis()" type="radio" id="Z" name="axis" value="3">
+						<label for="Z">Z</label>
+						<button onclick="wireframe()" style="color: #E4E4E4;background-color: #00adb5;width: 200px;height: 40px" id="task5">WIREFRAME ON/OFF</button>
+					</div>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>
